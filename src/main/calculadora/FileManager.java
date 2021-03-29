@@ -9,6 +9,7 @@ import java.io.*;
  */
 public class FileManager {
 
+    private static String path = "/Users/caiokb/Documents/IntelliJ Files/Multiplicador Matrizes/TXT's/";
     /**
      * Criar arquivo TXT em branco
      * @param label
@@ -16,7 +17,7 @@ public class FileManager {
      * @throws IOException
      */
     public static File createFile(String label) throws IOException {
-        File f = new File("/Users/Caio/Documents/Workspace/Paralelismo Iterativo/TXT's/" + label + ".txt");
+        File f = new File(path + label + ".txt");
         FileWriter writer = new FileWriter(f);
         writer.write("");
         writer.close();
@@ -59,7 +60,7 @@ public class FileManager {
      * @throws IOException
      */
     public static void readMatrix(int[][] matrixR, String label) throws IOException {
-        File f = new File("/Users/Caio/Documents/Workspace/Paralelismo Iterativo/TXT's/" + label + ".txt");
+        File f = new File(path + label + ".txt");
         FileReader fr = new FileReader(f);
 //1000 x 2000
         try{

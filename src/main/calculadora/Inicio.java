@@ -134,6 +134,10 @@ public class Inicio {
 			c.start();
 	}
 
+	/**
+	 * Chamada da função para criar as matrizes
+	 * @throws IOException
+	 */
 	private static void generateNewMatrix() throws IOException {
 		Gerador.generateRandomMatrix(1000, 1000, "A0");
 		Gerador.generateRandomMatrix(2000, 2000, "A1");
