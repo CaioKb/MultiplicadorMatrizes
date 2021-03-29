@@ -58,6 +58,18 @@ public class Gerador {
 		}
 	}
 
+	/**
+	 * Função para dividir entre as threads quantas linhas da matriz cada uma calcula
+	 * @param number
+	 * @param resto
+	 * @param processors
+	 * @param a
+	 * @param b
+	 * @param c
+	 * @param calculadoras
+	 * @param label
+	 * @param mutex
+	 */
 	public static void createCalculator(int number, int resto, int processors, int [][] a, int [][] b, int[][]c,
 										List<Calculadora> calculadoras, String label, Semaphore mutex){
 

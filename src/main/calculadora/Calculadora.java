@@ -66,6 +66,14 @@ public class Calculadora extends Thread {
 		System.exit(0);
 	}
 
+	/**
+	 * Função que multiplica as matrizes de forma paralela, utilizando threads
+	 * @param matrix1
+	 * @param matrix2
+	 * @param resMatrix
+	 * @param line
+	 */
+
 	public static void multMatrix(int[][] matrix1, int[][] matrix2, int[][] resMatrix, int line) {
 		for (int i = 0; i < matrix1.length; i++) {
 			for (int j = 0; j < matrix2[0].length; j++) {
@@ -93,6 +101,13 @@ public class Calculadora extends Thread {
 		System.out.println("Matrizes multiplicadas!\n");
 	}
 
+	/**
+	 * Função para calcular parte do SpeedUp geral
+	 * @param in
+	 * @param sequencial
+	 * @param out
+	 * @return
+	 */
 	public static double sequencialPart(double in, double sequencial, double out) {
 		double r;
 		r = (1 - (((in + sequencial + out) / sequencial)));
@@ -102,6 +117,12 @@ public class Calculadora extends Thread {
 			return r;
 	}
 
+	/**
+	 * Função que retorna o SpeedUp geral
+	 * @param fracPart
+	 * @param speedupPart
+	 * @return
+	 */
 	private static double generalSpeedUp(double fracPart, double speedupPart) {
 		return (1 / ((1 - fracPart) + (fracPart / speedupPart)));
 	}
